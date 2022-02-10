@@ -11,9 +11,83 @@
 
 <body>
 
+    <div style="display: none;" class="final">
+        <h2>You Answered All Questions</h2>
+        <p class="score"></p>
+        <button class="again">Try again</button>
+    </div>
 
-    <script src="./mainJS.js"></script>
-    <script src="./file.js"></script>
+    <div style="display: none;" class="quiz-questions">
+        <h2>Quiz Questions</h2>
+
+
+        <!-- display -->
+        <div class="count">
+            <p class="current">0</p>
+            <p>/</p>
+            <p class="total"></p>
+        </div>
+
+
+        <!-- question -->
+        <h3 id="question"></h3>
+
+        <!-- answer -->
+        <label id="la1" class="answer"></label>
+        <label id="la2" class="answer"></label>
+        <label id="la3" class="answer"></label>
+        <label id="la4" class="answer"></label>
+
+        <!-- btn -->
+        <button id="nextBtn">Next</button>
+    </div>
+
+    <div class="quiz-settings">
+        <h3>Quiz Settings</h3>
+
+        <!-- Number -->
+        <label for="numberQuestions">Number of Questions</label>
+        <input type="number" id="numberQuestions">
+
+        <!-- Category -->
+        <label for="category">Category</label>
+        <select name="category" id="category">
+            <option value="9">General Knowledge</option>
+            <option value="18">Computers</option>
+            <option value="21">Sports</option>
+            <option value="23">History</option>
+            <option value="25">Art</option>
+            <option value="27">Animals</option>
+            <option value="28">Vehicles</option>
+        </select>
+
+        <!-- Difficulty -->
+        <div class="difficulty-box">
+            <label for="difficulty">Difficulty</label>
+
+            <label for="easy">
+                <input type="radio" id="easy">
+                Easy
+            </label>
+
+            <label for="medium">
+                <input type="radio" id="medium">
+                Medium
+            </label>
+
+            <label for="hard">
+                <input type="radio" id="hard">
+                Hard
+            </label>
+
+        </div>
+
+        <!-- Buttons -->
+        <button id="startBtn">Start</button>
+
+    </div>
+
+    <script type="module" src="./mainJS.js"></script>
 </body>
 
 </html>
